@@ -1,0 +1,53 @@
+<!-- template.xhtml -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<!-- appel à la feuille de style -->
+ 	<h:outputStylesheet library="css" name="default.css"/> 
+	<!-- afichage de titre de navigateur -->
+	<title><h:outputText value="#{msg['appli.titre.navigateur']}"/></title>
+	
+	<!-- java script -->
+<!-- 	<script  name="jquery/jquery.js" library="primefaces"></script> -->
+</h:head>
+
+<h:body>
+
+	<!-- Block de tous les div -->
+	<div id="all_block">
+		<!-- insert de la partie header -->
+		<div id="header">
+			<ui:insert name="header">
+				<ui:include src="/pages/template/header.xhtml" />
+			</ui:insert>
+		</div>
+		
+		<!-- insert de la partie menu -->
+		<div id="menu">
+			<ui:insert name="menu">
+				<ui:include src="/pages/template/menu.xhtml" />
+			</ui:insert>
+		</div>
+		
+		<!-- insert de la vue spécifique à chaque vue de la page à afficher -->
+		<div id="content">
+			<ui:insert name="content">
+				<ui:insert name="content" />
+			</ui:insert>
+		</div>
+		
+		<!-- insert de la partie footer -->
+		<div id="footer">
+			<ui:insert name="footer">
+	 			<ui:include src="/pages/template/footer.xhtml" /> 
+			</ui:insert>
+		</div>
+	
+   </div>
+
+</h:body>
+</html>

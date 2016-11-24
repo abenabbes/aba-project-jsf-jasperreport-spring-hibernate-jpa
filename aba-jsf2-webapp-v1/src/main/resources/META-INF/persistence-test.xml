@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	  xmlns="http://java.sun.com/xml/ns/persistence" 
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+						  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <!-- Unite de persistance de test -->
+  <persistence-unit name="aba-hibernate-jpa-spring-v1-test_PU" transaction-type="RESOURCE_LOCAL">
+<!--     <class>com.byteslounge.spring.tx.model.User</class> -->
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+<!--     <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode> -->
+    <properties>
+        <property name="hibernate.transaction.flush_before_completion" value="true" />
+        <property name="hibernate.connection.autocommit" value="false" />
+        
+        <!-- On dit à hibernate que l'on utilise un cache de second niveau -->
+<!--         <property name="hibernate.cache.provider_class" value="org.hibernate.cache.SingletonEhCacheProvider"/> -->
+<!--         <property name="hibernate.cache.use_second_level_cache" value="true" /> -->
+<!--         <property name="hibernate.cache.use_query_cache" value="true" />  -->
+<!--         <property name="hibernate.cache.region_prefix" value=""/> -->
+        
+		<!-- On dit à hibernate que l'on utilise EhCache -->
+<!-- 		<property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory" /> -->
+
+<!--          <property name="hibernate.flushMode"    value="FLUSH_AUTO"/> -->
+    </properties>
+  </persistence-unit>
+
+</persistence>

@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <ui:composition 
+        		template="/pages/template/template.xhtml">
+        	 
+        	 <!-- Redefinition de div content du template.xhtml -->
+        	 <ui:define name="content">
+	        	 <f:view>
+		        	 <h:form>
+			        	 <!-- panelGroup : Definition d'un tableau en html -->
+				          <h:panelGrid border="0" columns="3" cellpadding="5">
+				            
+				            <!-- ============ Champs NOM ============ -->
+<!-- 				            <h:outputText value="Nom:"/> -->
+				            <p:outputLabel value="Nom:" styleClass="label" for="nom"/>
+				            <h:inputText id="nom" value="#{ajouterTask.taskDto.nomTask}" 
+				            			 required="true" requiredMessage="#{msg['aba.value.nom']}">
+				            	<!-- contrainte sur la colonne NOM -->
+				            	<f:validateLength minimum="4" maximum="12"/>
+				            </h:inputText>
+				          	<!-- message d'erreur -->
+				          	<h:message for="nom" errorStyle="color:red"/>
+				          	
+				          	<!-- ============ Champs DATE ============ -->
+<!-- 				          	<h:outputText value="Date:"/> -->
+							<p:outputLabel value="Date:" for="date" styleClass="label"/>
+				            <h:inputText id="date" value="#{ajouterTask.taskDto.dateTask}" 
+				            			 required="true" requiredMessage="#{msg['aba.value.date']}">
+				            	<!-- patterne de saisie de la date -->
+				            	<f:convertDateTime pattern="dd/MM/yyyy" />
+				            </h:inputText>
+				          	<!-- message d'erreur -->
+				          	<h:message for="date" errorStyle="color:red"/>
+				          	
+				          	<!-- Bonton de validation -->
+				            <h:commandButton value="Envoyer" action="#{ajouterTask.submit}" styleClass="button"/>
+				          </h:panelGrid>
+		        	 </h:form>
+	        	 </f:view>
+        	 </ui:define>
+        	 
+        </ui:composition>
+</html>

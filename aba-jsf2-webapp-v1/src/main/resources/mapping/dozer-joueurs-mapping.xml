@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  
+   <!-- Configuration de Dozer -->
+	<configuration>
+		<stop-on-errors>true</stop-on-errors>
+		<date-format>MM/dd/yyyy HH:mm</date-format>
+		<wildcard>true</wildcard>
+	</configuration>
+ 
+	<!-- beans mappés par Dozer -->
+   <mapping>
+      <class-a>aba.perso.couche.entite.JoueurEntite</class-a>
+      <class-b>aba.perso.couche.dto.JoueurDto</class-b>
+<!--       <field> -->
+<!--       	  <a>id</a> -->
+<!-- 	  	  <b>id</b> -->
+<!--       </field> -->
+<!--        <field> -->
+<!--           <a>nom</a> -->
+<!-- 	  	  <b>nomJoueur</b> -->
+<!--       </field> -->
+<!--        <field> -->
+<!-- 	  	  <a>prenom</a> -->
+<!-- 	  	  <b>prenomJoueur</b> -->
+<!--       </field> -->
+<!--        <field> -->
+<!-- 	  	  <a>age</a> -->
+<!-- 	  	  <b>age</b> -->
+<!--       </field> -->
+<!--       <field> -->
+<!-- 	  	  <a>email</a> -->
+<!-- 	  	  <b>emailJoueur</b> -->
+<!--       </field> -->
+<!--       <field> -->
+<!-- 	  	  <a>equipe</a> -->
+<!-- 	  	  <b>equipe</b> -->
+<!-- 	  	  <a-hint>aba.perso.couche.entite.EquipeEntite</a-hint> -->
+<!--           <b-hint>aba.perso.couche.dto.EquipeDto</b-hint> -->
+<!--       </field> -->
+<!--       <field-exclude> -->
+<!--       	<a>version</a> -->
+<!--       	<b>version</b> -->
+<!--       </field-exclude> -->
+   </mapping>
+   
+</mappings>
