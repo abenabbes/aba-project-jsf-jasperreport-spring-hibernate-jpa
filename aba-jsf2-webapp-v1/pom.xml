@@ -66,6 +66,11 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
          <!-- spring transaction -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -231,6 +236,26 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>${h2.database.version}</version>
+		</dependency>
+		
+		<!-- =======JasperReport======== -->
+		<dependency>
+		    <groupId>net.sf.jasperreports</groupId>
+		    <artifactId>jasperreports</artifactId>
+		    <version>5.5.0</version>
+<!-- 		    <exclusions> -->
+<!-- 		    	<exclusion> -->
+<!-- 		    		<artifactId>spring-context</artifactId> -->
+<!-- 		    		<groupId>org.springframework</groupId> -->
+<!-- 		    	</exclusion> -->
+<!-- 		    </exclusions> -->
+		</dependency>
+
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.36</version>
 		</dependency>
   </dependencies>
   
